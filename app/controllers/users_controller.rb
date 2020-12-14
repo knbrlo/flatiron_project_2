@@ -34,11 +34,8 @@ class UsersController < ApplicationController
     # login - get
     get '/login' do
         if is_logged_in?
-
-            # todo - make this page
-            # redirect to "/users/#{current_user.id}"
+            redirect to "/users/#{active_user.id}"
           else
-            # todo - make this page
             erb :'/users/user_login'
           end
     end
@@ -47,7 +44,6 @@ class UsersController < ApplicationController
     post '/login' do
         @user = User.find_by(username: params[:username].strip, password: params[:password].strip)
 
-        binding.pry
         # if the user is not nil, then send them to the home page
         if !@user.nil?
             session[:user_id] = @user.id
@@ -56,6 +52,37 @@ class UsersController < ApplicationController
             # take them back / keep them on the login page
             redirect to '/login'
         end
+    end
+
+
+    # profile - get
+    get '/users/:id' do
+        
+        # get the user
+        @user = User.find_by_id(params[:id])
+
+        # make sure they're logged in and the id of the page is equal to the active user
+        if is_logged_in? && @user == active_user
+            erb :'/users/user_profile'
+        else
+            redirect to '/login'
+        end
+
+    end
+
+    # profile edit - get
+    get '/users/:id/edit' do
+        
+        # get the user
+        @user = User.find_by_id(params[:id])
+
+        # make sure they're logged in and the id of the page is equal to the active user
+        if is_logged_in? && @user == active_user
+            erb :'/users/user_edit'
+        else
+            redirect to '/login'
+        end
+
     end
 
 

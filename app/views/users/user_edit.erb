@@ -1,0 +1,11 @@
+<p>Showz</p>
+<p>Account Edit</p>
+<div id="user-form-edit" class="shared-form">
+    <form method="POST" action="/users/<%=@user.id%>">
+        <input type="hidden" name="_method" value="PATCH">
+        Username: <input type="text" name="username" value="<%=@user.username%>">
+        Email: <input type="text" name="email" value="<%=@user.email%>">
+        Password: <input type="password" name="password" value="samplepassword">
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
