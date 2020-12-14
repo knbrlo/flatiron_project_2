@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
         # make sure they're logged in and the id of the page is equal to the active user
         if is_logged_in? && @user == active_user
-            erb :"/users/user_profile"
+            erb :"/users/user_detail"
         else
             redirect to "/login"
         end
