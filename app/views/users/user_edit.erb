@@ -6,6 +6,12 @@
         Username: <input type="text" name="username" value="<%=@user.username%>">
         Email: <input type="text" name="email" value="<%=@user.email%>">
         Password: <input type="password" name="password" value="samplepassword">
-        <button type="submit">Sign Up</button>
+        <button type="submit">Confirm Changes</button>
+    </form>
+    <br>
+    <!-- todo: Would be nice to have them confirm that they'd like to delete.-->
+    <form method="POST" action="/users/<%=@user.id%>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete Your Account">
     </form>
 </div>
