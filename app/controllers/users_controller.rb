@@ -30,7 +30,6 @@ class UsersController < ApplicationController
         end
     end
 
-
     # login - get
     get "/login" do
         if is_logged_in?
@@ -43,6 +42,10 @@ class UsersController < ApplicationController
     # login - post
     post "/login" do
         @user = User.find_by(username: params[:username].strip, password: params[:password].strip)
+
+        # todo - char - use .authenticate 
+        # todo - char - does this login with a bad password.
+        # todo - char - did I find the user and odes the passsword they passed in match use .authenticate.
 
         # if the user is not nil, then send them to the home page
         if !@user.nil?
