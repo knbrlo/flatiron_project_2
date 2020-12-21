@@ -9,7 +9,6 @@
         <button type="submit">Confirm Changes</button>
     </form>
     <br>
-    <!-- todo: Would be nice to have them confirm that they'd like to delete.-->
     <form method="POST" action="/users/<%=@user.id%>">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Delete Your Account">

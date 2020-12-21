@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
     get "/signup" do 
         if is_logged_in?
-            # todo - redirect the user to their page using their id
             redirect to "/"
         else
             erb :"/users/create"
@@ -12,8 +11,6 @@ class UsersController < ApplicationController
     post "/signup" do
         # create a new user from the filled out form
         @new_user = User.new(username: params[:username].strip, email: params[:email].strip, password: params[:password].strip)
-
-        # todo - this could use some refactoring so that we're validating that all the info has been filled out correctly.
         @new_user.save
         
         # user isn't nil, then redirect to the main page
@@ -73,7 +70,7 @@ class UsersController < ApplicationController
 
         # make sure they're logged in and the id of the page is equal to the active user
         if is_logged_in? && @user == active_user
-            # todo -  would be nice to show a message here that it was saved successfully.
+
             erb :"/users/edit"
         else
             redirect to "/login"
