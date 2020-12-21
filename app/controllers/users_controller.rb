@@ -9,8 +9,14 @@ class UsersController < ApplicationController
     end
 
     post "/signup" do
+
+        #todo - don't let them sign up with nil values.
+
+
         # create a new user from the filled out form
         @new_user = User.new(username: params[:username].strip, email: params[:email].strip, password: params[:password].strip)
+        
+        
         @new_user.save
         
         # user isn't nil, then redirect to the main page
@@ -19,6 +25,7 @@ class UsersController < ApplicationController
             #assign the session id from the newly created and saved user.
             session[:user_id] = @new_user.id
 
+            # todo - redirect to their account.
             redirect to "/"
         else
             # take them back to the login page
