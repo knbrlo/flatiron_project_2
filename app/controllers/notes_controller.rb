@@ -3,7 +3,6 @@ class NotesController < ApplicationController
 
     # todo - char - user should have full crud over this.
     # 7 restful routes
-
     get '/notes' do
 
         if is_logged_in?
@@ -48,9 +47,6 @@ class NotesController < ApplicationController
         end
     end
 
-
-    # #show
-    # get '/photos/:id'
     get '/notes/:id' do
 
         @note = Note.find_by_id(params[:id])
@@ -67,18 +63,59 @@ class NotesController < ApplicationController
         end
     end
 
+    #edit
+    get '/notes/:id/edit' do
 
+        @note = Note.find_by_id(params[:id])
 
+        # if they're logged in, if they are the owner then display the page.
+        if is_logged_in? && (@note.user_id == active_user.id)
 
-    # #edit
-    # get '/photos/:id/edit'
+            erb :"/notes/edit"
+        else
 
-    # #update
-    # put '/photos/:id'
+            # take them back to the main page
+            redirect to "/"
+        end
 
+    end
 
-    # #destroy
-    # delete '/photos/:id'
+    patch '/notes/:id' do
+        
+        @note = Note.find_by_id(params[:id])
 
+        # if they're logged in, if the note isn't nil and
+        # if they are the owner then allow them to edit the note.
+        if is_logged_in? && !@note.nil? && (@note.user_id == active_user.id)
 
+            @note.title = params[:title].strip
+            @note.content = params[:content].strip
+            @note.save
+
+            redirect to "/notes/#{@note.id}"
+        else
+
+            # take them back to the main page
+            redirect to "/"
+        end
+    end
+
+    delete '/notes/:id' do
+        
+        @note = Note.find_by_id(params[:id])
+
+        # if they're logged in, if the note isn't nil and
+        # if they are the owner then allow them to edit the note.
+        if is_logged_in? && !@note.nil? && (@note.user_id == active_user.id)
+
+            @note.delete
+
+            redirect to "/notes"
+        else
+
+            # take them back to the main page
+            redirect to "/"
+        end
+
+    end
 end

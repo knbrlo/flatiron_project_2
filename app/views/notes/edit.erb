@@ -1,0 +1,14 @@
+<h1>This is the note edit page</h1>
+<form method="POST" action="/notes/<%= @note.id %>">
+    <input type="hidden" name="_method" value="PATCH">
+    Title: <input type="text" name="title" value="<%=@note.title%>">
+    Content: <input type="text" name="content" value="<%=@note.content%>">
+    <button type="submit">Save Changes</button>
+</form>
+<br>
+<br>
+<!-- todo: Would be nice to have them confirm that they'd like to delete.-->
+<form method="POST" action="/notes/<%=@note.id%>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Note">
+</form>
