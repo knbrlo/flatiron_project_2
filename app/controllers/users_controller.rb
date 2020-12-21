@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-    # sign up - get
     get "/signup" do 
         if is_logged_in?
             # todo - redirect the user to their page using their id
@@ -9,7 +8,6 @@ class UsersController < ApplicationController
         end
     end
 
-    # sign up - post
     post "/signup" do
         # create a new user from the filled out form
         @new_user = User.new(username: params[:username].strip, email: params[:email].strip, password: params[:password].strip)
@@ -30,7 +28,6 @@ class UsersController < ApplicationController
         end
     end
 
-    # login - get
     get "/login" do
         if is_logged_in?
             redirect to "/users/#{active_user.id}"
@@ -39,7 +36,6 @@ class UsersController < ApplicationController
           end
     end
 
-    # login - post
     post "/login" do
         @user = User.find_by(username: params[:username].strip, password: params[:password].strip)
 
@@ -57,8 +53,6 @@ class UsersController < ApplicationController
         end
     end
 
-
-    # profile - get
     get "/users/:id" do
         
         # get the user
@@ -73,7 +67,6 @@ class UsersController < ApplicationController
 
     end
 
-    # profile edit - get
     get "/users/:id/edit" do
         
         # get the user
@@ -89,7 +82,6 @@ class UsersController < ApplicationController
 
     end
 
-    # profile edit - patch
     patch "/users/:id" do
 
         # get all of the changes and assign them to the user
@@ -108,8 +100,6 @@ class UsersController < ApplicationController
         end
     end
 
-
-    # log out - get
     get "/logout" do
         if is_logged_in?
             # if we're logged in then clear the session to put is in a logged out state
@@ -120,7 +110,6 @@ class UsersController < ApplicationController
         end
     end
 
-    # delete
     delete "/users/:id" do
 
         # get the currently logged in user
