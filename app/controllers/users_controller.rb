@@ -119,10 +119,6 @@ class UsersController < ApplicationController
         # that they're trying to delete
         if is_logged_in? && @user == active_user
 
-            # todo - delete their providers they're signed up with
-
-            # todo - delete their shows they're watching.
-
             # delete their account
             @user.delete
 
