@@ -1,8 +1,13 @@
-<p>Login to Nevernote</p>
-<div id="user-form-login" class="shared-form">
-    <form method="POST" action="/login">
-        Username: <input type="text" name="username">
-        Password: <input type="password" name="password">
-        <button type="submit">Login</button>
-    </form>
+<div id="login-form-container">
+    <div id="login-form-inner">
+        <p id="login-form-title">Nevernote</p>
+        <p id="login-form-subtitle">Never forget anything, except 2020.</p>
+        <form method="POST" action="/login">
+            <input id="login-form-username" class="standard-form-input" type="text" name="username" placeholder="Email address or username" autocomplete="off" autofocus>
+            <input id="login-form-password" class="standard-form-input" type="password" name="password" placeholder="Password" autocomplete="off">
+            <button id="login-form-button" class="standard-button" type="submit">Login</button>
+        </form>
+        <p id="login-form-create-title">Don't have an account?</p>
+        <a id="login-form-create-link" href="/signup">Create an account</a>
+    </div>
 </div>
