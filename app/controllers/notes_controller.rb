@@ -4,6 +4,22 @@ class NotesController < ApplicationController
     # todo - char - user should have full crud over this.
     # 7 restful routes
 
+    #new
+    get '/notes/create' do
+
+        # they can only create new notes if they're logged in
+        if is_logged_in?
+            
+            #take them to the new note creation page
+            erb :"/notes/create"
+        else
+
+            # take them back to the main page
+            redirect to "/"
+        end
+    end
+
+
     #index
     get '/notes/:id' do
 
@@ -12,7 +28,7 @@ class NotesController < ApplicationController
 
         # compare the userid they're requesting notes for against
         # the logged in user id
-        if @requested_notes_user.id == active_user.id 
+        if @requested_notes_user == active_user
 
             # query for all notes that have the same id as me.
             @all_notes = Note.where("user_id = #{active_user.id}")
@@ -26,11 +42,7 @@ class NotesController < ApplicationController
     end
 
 
-    # #new
-    # '/notes/new'
-    get '/notes/new' do
-        
-    end
+
 
     # #create
     # post '/photos'
