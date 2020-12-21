@@ -11,7 +11,7 @@
         <ul>
             <% if is_logged_in? %>
                 <li><a href="/notes/create">Create a New Note</a></li>
-                <li><a href="/notes/<%=active_user.id%>">My Notes</a></li>
+                <li><a href="/notes">My Notes</a></li>
                 <li><a href="/users/<%=active_user.id%>">My Account</a></li>
                 <li><a href="/logout">Log Out</a></li>
             <% else %>

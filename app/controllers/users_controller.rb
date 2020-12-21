@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     get "/signup" do 
         if is_logged_in?
             # todo - redirect the user to their page using their id
+            redirect to "/"
         else
             erb :"/users/create"
         end
@@ -37,17 +38,15 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-        @user = User.find_by(username: params[:username].strip, password: params[:password].strip)
 
-        # todo - char - use .authenticate 
-        # todo - char - does this login with a bad password.
-        # todo - char - did I find the user and odes the passsword they passed in match use .authenticate.
+        user = User.find_by(username: params[:username])
 
-        # if the user is not nil, then send them to the home page
-        if !@user.nil?
-            session[:user_id] = @user.id
-            redirect to "/"
+        if user && user.authenticate(params[:password]) 
+
+            session[:user_id] = user.id
+            redirect to "/notes"
         else
+
             # take them back / keep them on the login page
             redirect to "/login"
         end
@@ -86,13 +85,13 @@ class UsersController < ApplicationController
 
         # get all of the changes and assign them to the user
         @user = User.find_by_id(params[:id])
-        @user.username = params[:username].strip
-        @user.email = params[:email].strip
-        @user.password = params[:password].strip
-
+        
         # make sure they're logged in, they are the user they're trying
         # to edit
         if is_logged_in? && @user == active_user
+            @user.username = params[:username].strip
+            @user.email = params[:email].strip
+            @user.password = params[:password].strip
             @user.save
             redirect to "/users/#{@user.id}"
         else
