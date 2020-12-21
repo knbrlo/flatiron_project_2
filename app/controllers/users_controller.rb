@@ -5,7 +5,7 @@ class UsersController < ApplicationController
         if is_logged_in?
             # todo - redirect the user to their page using their id
         else
-            erb :"/users/user_create"
+            erb :"/users/create"
         end
     end
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
         if is_logged_in?
             redirect to "/users/#{active_user.id}"
           else
-            erb :"/users/user_login"
+            erb :"/users/login"
           end
     end
 
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
 
         # make sure they're logged in and the id of the page is equal to the active user
         if is_logged_in? && @user == active_user
-            erb :"/users/user_detail"
+            erb :"/users/detail"
         else
             redirect to "/login"
         end
@@ -82,7 +82,7 @@ class UsersController < ApplicationController
         # make sure they're logged in and the id of the page is equal to the active user
         if is_logged_in? && @user == active_user
             # todo -  would be nice to show a message here that it was saved successfully.
-            erb :"/users/user_edit"
+            erb :"/users/edit"
         else
             redirect to "/login"
         end
