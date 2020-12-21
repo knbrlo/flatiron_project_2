@@ -1,4 +1,49 @@
 
-header ul {
-    list-style-type:none;
+h1 {
+    width: 100%;
+    text-align: center;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 150px;
+}
+
+h5 {
+    font-size: 24px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.header-logo {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+    height: auto;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.header-selection-item {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+    height: auto;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
 }
