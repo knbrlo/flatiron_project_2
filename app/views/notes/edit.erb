@@ -1,13 +1,16 @@
-<h1>This is the note edit page</h1>
-<form method="POST" action="/notes/<%= @note.id %>">
-    <input type="hidden" name="_method" value="PATCH">
-    Title: <input type="text" name="title" value="<%=@note.title%>">
-    Content: <input type="text" name="content" value="<%=@note.content%>">
-    <button type="submit">Save Changes</button>
-</form>
-<br>
-<br>
-<form method="POST" action="/notes/<%=@note.id%>">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete Note">
-</form>
+<div id="edit-form-container">
+    <div id="form-inner-edit">
+        <p id="form-title">Edit Your Note</p>
+        <p id="form-subtitle">Never forget anything, except 2020.</p>
+        <form method="POST" action="/notes/<%= @note.id %>">
+            <input type="hidden" name="_method" value="PATCH">
+            <input id="edit-form-title" class="standard-form-input" type="text" name="title" placeholder="Title" value="<%=@note.title%>" autocomplete="off" autofocus>
+            <textarea id="edit-form-content" class="standard-form-input" type="textarea" name="content" placeholder="Content" value="<%=@note.content%>" autocomplete="off" cols="40" rows="5"></textarea>
+            <button id="form-edit-save-button" class="standard-button" type="submit">Save Changes</button>
+        </form>
+        <form method="POST" action="/notes/<%=@note.id%>">
+            <input type="hidden" name="_method" value="delete">
+            <input id="form-edit-delete-button" class="standard-button" type="submit" value="Delete Note">
+        </form>
+    </div>
+</div>
