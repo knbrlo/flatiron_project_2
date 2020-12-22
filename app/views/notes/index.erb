@@ -15,6 +15,7 @@
                 <div class="note-editor-list-item">
                     <p><%= note.title %></p>
                     <p><%= note.content %></p>
+                    <p id="note-editor-list-item-date"><%= note.created_at.strftime("%B %d %Y - %I:%M %p")%></p>
                 </div>
             </a>
         <% end %>

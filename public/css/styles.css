@@ -248,7 +248,8 @@ h5 {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    
+    color: #333333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .note-editor-list-item {
@@ -284,13 +285,13 @@ h5 {
 #notes-editor-content {
     width: 99%;
     height: 100%;
-    background: orange;
+    background: white;
 }
 
 #notes-editor-content-header {
     display: flex;
     flex-direction: row;
-    background: red;
+    background: white;
     height: 70px;
     width: 100%;
     justify-content: space-between;
@@ -298,15 +299,15 @@ h5 {
 
 #notes-editor-content-detail {
     width: 100%;
-    height: 100%;
+    height: 92%;
 }
 
 #notes-editor-content-detail textarea {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 92%;
     border: none;
     resize: none;
-    background: purple;
+    background: white;
     user-select: none;
     border: none;
 }
@@ -317,4 +318,57 @@ h5 {
 
 .note-editor-list-item:focus {
     background: white;
+}
+
+#note-editor-list-item-date {
+    margin-top: 38px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+#notes-editor-content-title {
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    border: none;
+    color: #333;
+    outline: none;
+    padding-bottom: 4px;
+    width: 100%;
+    user-select: none;
+    padding-left: 40px;
+}
+
+#notes-editor-content-content {
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    border: none;
+    color: #333;
+    outline: none;
+    padding-bottom: 4px;
+    width: 95%;
+    user-select: none;
+    padding-left: 45px;
+    padding-top: 20px;
+}
+
+#notes-editor-content-button {
+    width: 120px;
+    max-height: 15px;
+    background: #4CB1F7;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
