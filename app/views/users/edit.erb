@@ -1,0 +1,17 @@
+<div id="account-edit-form-container">
+    <div id="form-inner">
+        <p id="form-title">Account Edit</p>
+        <p id="form-subtitle">Never forget anything, except 2020.</p>
+        <form method="POST" action="/users/<%=@user.id%>">
+            <input type="hidden" name="_method" value="PATCH">
+            <input id="form-username" class="standard-form-input" type="text" name="username" value="<%=@user.username%>" placeholder="Username" autocomplete="off" autofocus>
+            <input id="form-password" class="standard-form-input" type="text" name="email" value="<%=@user.email%>" placeholder="Email address" autocomplete="off">
+            <input id="form-password" class="standard-form-input" type="password" name="password" value="samplepassword" placeholder="Password" autocomplete="off">
+            <button id="form-button" class="standard-button" type="submit">Confirm Changes</button>
+        </form>
+        <form method="POST" action="/users/<%=@user.id%>">
+            <input type="hidden" name="_method" value="delete">
+            <input id="account-delete-button" type="submit" value="Delete Your Account">
+        </form>
+    </div>
+</div>

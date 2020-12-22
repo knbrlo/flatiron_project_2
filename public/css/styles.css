@@ -1,4 +1,533 @@
 
-header ul {
-    list-style-type:none;
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+input:focus { 
+    outline: none !important;
+    border-color:  #4CB1F7;
+}
+
+button:focus {outline:0;}
+textarea:focus {outline:0;}
+
+#header-site-wide-border {
+    width: 100%;
+    border-bottom: 1px solid #0000001f;
+    margin-left: 0px;
+}
+
+#index-hero-sign-up-btn {
+    width: 300px;
+    height: auto;
+    color: white;
+    background-color: #4CB1F7;
+    border-radius: 3px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+    letter-spacing: 1px;
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+    text-align: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 150px;
+}
+
+h5 {
+    font-size: 24px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.header-logo {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+    height: auto;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.header-selection-item {
+    text-decoration: none;
+    font-family: Helvetica,Arial,sans-serif;
+    height: auto;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+}
+
+#form-container {
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 6%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 3px;
+}
+
+#form-inner {
+    width: 300px;
+    height: 90%;
+}
+
+#form-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+#form-subtitle {
+    text-align: center;
+    color: #333333;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 44px;
+}
+
+
+#form-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+#form-create-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737373;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#form-create-link {
+    text-decoration: none;
+    color: #4CB1F7;
+}
+
+.standard-form-input {
+    width: 300px;
+    height: 45px;
+    border-radius: 7px;
+    border: 1px solid #0000001f;
+    padding: 12px 16px;
+    line-height: 1.18;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#form-password {
+    margin-top: 20px;
+}
+
+.standard-button {
+    width: 300px;
+    height: 46px;
+    color: white;
+    background-color: #4CB1F7;
+    border-radius: 7px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+    letter-spacing: 1px;
+}
+
+#form-button {
+   margin-top: 40px;
+}
+
+#form-create-link {
+    text-align: center;
+    margin-top: 34px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    margin-top: -5px;
+}
+
+#signup-form-container {
+    width: 500px;
+    height: 566px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 6%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 3px;
+}
+
+#notes-editor-container {
+    background: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#notes-editor-nav {
+    background: #1a1a1a;
+    height: 100%;
+    width:14%;
+    min-width: 190px;
+}
+
+#notes-editor-nav-selections {
+    margin-top: 20px;
+}
+ 
+#notes-editor-nav-selections a {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.notes-editor-nav-selection {
+    color:white;
+}
+
+#notes-editor-list {
+    width: 30%;
+    min-width: 380px;
+    height: 100%;
+    background: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: #333333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.note-editor-list-item {
+    background: #e6e6e6;
+    border-bottom: 1px solid #0000001f;
+    min-height: 120px;
+}
+
+#notes-editor-header {
+    margin-left: 30px;
+}
+
+.note-editor-list-item p {
+    margin-left: 30px;
+}
+
+#notes-editor-nav-new-note {
+    width: 150px;
+    height: auto;
+    background: #4CB1F7;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+#notes-editor-content {
+    width: 99%;
+    height: 100%;
+    background: white;
+}
+
+#notes-editor-content-header {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#notes-editor-content-detail {
+    width: 100%;
+    height: 92%;
+}
+
+#notes-editor-content-detail textarea {
+    width: 95%;
+    height: 92%;
+    border: none;
+    resize: none;
+    background: white;
+    user-select: none;
+    border: none;
+}
+
+#note-editor-list-item-date {
+    margin-top: 38px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+#notes-editor-content-title {
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    border: none;
+    color: #333;
+    outline: none;
+    padding-bottom: 4px;
+    width: 100%;
+    user-select: none;
+    padding-left: 40px;
+}
+
+#notes-editor-content-content {
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    border: none;
+    color: #333;
+    outline: none;
+    padding-bottom: 4px;
+    width: 95%;
+    user-select: none;
+    padding-left: 45px;
+    padding-top: 20px;
+}
+
+#notes-editor-content-button {
+    width: 120px;
+    max-height: 15px;
+    background: #4CB1F7;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#header-container-new-note {
+    width: 120px;
+    max-height: 15px;
+    background: #4CB1F7;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+
+#edit-form-container {
+    width: 80%;
+    height: 566px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 6%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 3px;
+    min-width: 828px;
+    max-width: 1000px;
+}
+
+#form-inner-edit {
+    width: 90%;
+    height: 90%;
+}
+
+#form-inner-edit .standard-form-input {
+    width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    border: 1px solid #0000001f;
+    padding: 12px 16px;
+    line-height: 1.18;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+#edit-form-content {
+    resize: none;
+    height: 200px !important;
+    margin-top: 20px;
+}
+
+#form-inner-edit .standard-button {
+    display: inline-block;
+}
+
+#form-edit-save-button {
+    float: right;
+    margin-top: 20px;
+}
+
+#form-edit-delete-button {
+    float: left;
+    margin-top: 20px;
+}
+
+
+#account-page-container {
+    background: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+#account-page-left-selections {
+    background: #1a1a1a;
+    height: 100%;
+    width: 14%;
+    min-width: 190px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#account-page-container h4 {
+    margin-top: 0px;
+}
+
+#account-page-main-content {
+    background: white;
+    height: 100%;
+    width: 86%;
+    color: #333;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.account-page-main-content-item {
+    height: 70px;
+    width: 500px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #0000001f;
+    padding-top: 30px;
+}
+
+.account-page-main-content-item p {
+    margin-top: 0px;
+    
+}
+
+.account-page-mc-item-title {
+    min-width: 100px;
+    background: white;
+    height: 100%;
+}
+
+#account-page-main-content-border {
+    border-bottom: 1px solid #0000001f;
+    width: 92%;
+}
+
+#account-page-main-content a {
+    text-decoration: none;
+    color: #4CB1F7;
+}
+
+#account-edit-form-container {
+    width: 500px;
+    height: 566px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 6%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 3px;
+}
+
+#account-delete-button {
+    border: none;
+    background: white;
+    width: 100%;
+    margin-top: 80px;
+    color: #ababab;
+}
+
+#note-show-page-container {
+    text-align: center;
 }
