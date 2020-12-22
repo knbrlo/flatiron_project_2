@@ -11,6 +11,8 @@
         <div id="header-container">
             <a class="header-logo" href="/">Home</a>
             <% if is_logged_in? %>
+                <a id="header-container-new-note" class="header-selection-item" href="/notes/create">New Note</a>
+                <a class="header-selection-item" href="/notes">All Notes</a>
                 <a class="header-selection-item" href="/users/<%=active_user.id%>">Account</a>
                 <a class="header-selection-item" href="/logout">Log Out</a>
             <% else %>
