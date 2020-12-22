@@ -1,5 +1,38 @@
-<h1>These are your notes </h1>
-<% @all_notes.each do |note| %>
-    <p><%= note.title %></p>
-    <p><%= note.content %></p>
-<% end %>
+<div id="notes-editor-container">
+    <div id="notes-editor-nav">
+        <p><%= @user.email %></p>
+        <a id="notes-editor-nav-new-note" href="/notes/create">New Note</a>
+        <a class="notes-editor-nav-selection">All Notes</a>
+        <a class="notes-editor-nav-selection">Notebooks</a>
+        <a class="notes-editor-nav-selection">Trash</a>
+    </div>
+    <div id="notes-editor-list">
+        <h2 id="notes-editor-header">All Notes</h2>
+        <% @all_notes.each do |note| %>
+            <a onclick='showHideActive( <%= note.to_json %> )' >
+                <div class="note-editor-list-item">
+                    <p><%= note.title %></p>
+                    <p><%= note.content %></p>
+                </div>
+            </a>
+        <% end %>
+    </div>
+    <div id="notes-editor-content">
+        <div id="notes-editor-content-header">
+            <% if @all_notes.length > 0 %>
+                <p id="notes-editor-content-title"><%= @all_notes[0].title %></p>
+                <a id="notes-editor-content-button" href="/notes/<%= @all_notes[0].id%>/edit">Edit</a>
+            <% else %>
+                <p id="notes-editor-content-title">Write your first note.</p>
+                <a id="notes-editor-content-button" href="/notes/create">Create</a>
+            <% end %>
+        </div>
+        <div id="notes-editor-content-detail">
+            <% if @all_notes.length > 0 %>
+                <textarea id="notes-editor-content-content" readonly><%= @all_notes[0].content %></textarea>
+            <% else %>
+                <textarea id="notes-editor-content-content" readonly></textarea>
+            <% end%>    
+        </div>
+    </div>
+</div>

@@ -11,9 +11,7 @@
         <div id="header-container">
             <a class="header-logo" href="/">Home</a>
             <% if is_logged_in? %>
-                <a class="header-selection-item" href="/notes/create">Create a New Note</a>
-                <a class="header-selection-item" href="/notes">My Notes</a>
-                <a class="header-selection-item" href="/users/<%=active_user.id%>">My Account</a>
+                <a class="header-selection-item" href="/users/<%=active_user.id%>">Account</a>
                 <a class="header-selection-item" href="/logout">Log Out</a>
             <% else %>
                 <a class="header-selection-item" href="/login">Login</a>
@@ -23,5 +21,6 @@
     </header>
     <div id="header-site-wide-border"></div>
   <%= yield %>
+  <script src="/javascript/application.js"></script>
 </body>
 </html>

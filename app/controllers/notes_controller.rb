@@ -6,6 +6,10 @@ class NotesController < ApplicationController
 
             # query for all notes that have the same id as me.
             @all_notes = Note.where("user_id = #{active_user.id}")
+
+            # get the user
+            @user = User.find_by_id(active_user.id)
+
             erb :"/notes/index"
         else
 
