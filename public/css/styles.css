@@ -439,3 +439,69 @@ h5 {
     margin-top: 20px;
 }
 
+
+#account-page-container {
+    background: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: Source Sans Pro,-apple-system,system-ui,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+#account-page-left-selections {
+    background: #1a1a1a;
+    height: 100%;
+    width: 14%;
+    min-width: 190px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#account-page-container h4 {
+    margin-top: 0px;
+}
+
+#account-page-main-content {
+    background: white;
+    height: 100%;
+    width: 86%;
+    color: #333;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.account-page-main-content-item {
+    height: 70px;
+    width: 500px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #0000001f;
+    padding-top: 30px;
+}
+
+.account-page-main-content-item p {
+    margin-top: 0px;
+    
+}
+
+.account-page-mc-item-title {
+    min-width: 100px;
+    background: white;
+    height: 100%;
+}
+
+#account-page-main-content-border {
+    border-bottom: 1px solid #0000001f;
+    width: 92%;
+}
+
+#account-page-main-content a {
+    text-decoration: none;
+    color: #4CB1F7;
+}

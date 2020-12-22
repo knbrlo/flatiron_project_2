@@ -1,6 +1,19 @@
-<div>
-    <h1>Account</h1>
-    <p>Username: <%= @user.username %></p>
-    <p>Email: <%= @user.email %></p>
-    <p><a href="/users/<%= @user.id %>/edit">Edit Account</a></p>
+<div id="account-page-container">
+    <div id="account-page-left-selections">
+        <h4>Account</h4>
+        <p>Account Summary</p>
+    </div>
+    <div id="account-page-main-content">
+        <h2>Account Summary</h2>
+        <div id="account-page-main-content-border"></div>
+        <div class="account-page-main-content-item">
+            <p class="account-page-mc-item-title">Username</p>
+            <p class="account-page-mc-item-detail"><%= @user.username %></p>
+        </div>
+        <div class="account-page-main-content-item">
+            <p class="account-page-mc-item-title" >Email</p>
+            <p class="account-page-mc-item-detail"><%= @user.email %></p>
+        </div>
+        <p><a href="/users/<%= @user.id %>/edit">Edit Account</a></p>
+    </div>
 </div>
