@@ -12,8 +12,6 @@ Clone the repo
 
 Run ```bundle install``` to install the required dependencies.
 
-Run ```rake db:migrate``` to setup the database, create the tables, and the schema.
-
 Run ```shotgun``` to start the server locally.
 
 Open ```http://127.0.0.1:9393/``` in your browswer.
