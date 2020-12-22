@@ -5,7 +5,7 @@ class NotesController < ApplicationController
         if is_logged_in?
 
             # query for all notes that have the same id as me.
-            @all_notes = Note.where("user_id = #{active_user.id}")
+            @all_notes = Note.where("user_id = #{active_user.id}").order("created_at desc")
 
             # get the user
             @user = User.find_by_id(active_user.id)
