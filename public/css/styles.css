@@ -527,3 +527,7 @@ h5 {
     margin-top: 80px;
     color: #ababab;
 }
+
+#note-show-page-container {
+    text-align: center;
+}
