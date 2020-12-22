@@ -5,7 +5,7 @@
         <form method="POST" action="/notes/<%= @note.id %>">
             <input type="hidden" name="_method" value="PATCH">
             <input id="edit-form-title" class="standard-form-input" type="text" name="title" placeholder="Title" value="<%=@note.title%>" autocomplete="off" autofocus>
-            <textarea id="edit-form-content" class="standard-form-input" type="textarea" name="content" placeholder="Content" value="<%=@note.content%>" autocomplete="off" cols="40" rows="5"></textarea>
+            <textarea id="edit-form-content" class="standard-form-input" type="textarea" name="content" placeholder="Content" autocomplete="off" cols="40" rows="5"><%=@note.content%></textarea>
             <button id="form-edit-save-button" class="standard-button" type="submit">Save Changes</button>
         </form>
         <form method="POST" action="/notes/<%=@note.id%>">
