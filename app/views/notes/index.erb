@@ -2,9 +2,11 @@
     <div id="notes-editor-nav">
         <p><%= @user.email %></p>
         <a id="notes-editor-nav-new-note" href="/notes/create">New Note</a>
-        <a class="notes-editor-nav-selection">All Notes</a>
-        <a class="notes-editor-nav-selection">Notebooks</a>
-        <a class="notes-editor-nav-selection">Trash</a>
+        <div id="notes-editor-nav-selections">
+            <a class="notes-editor-nav-selection">All Notes</a>
+            <a class="notes-editor-nav-selection">Notebooks</a>
+            <a class="notes-editor-nav-selection">Trash</a>
+        </div>
     </div>
     <div id="notes-editor-list">
         <h2 id="notes-editor-header">All Notes</h2>
