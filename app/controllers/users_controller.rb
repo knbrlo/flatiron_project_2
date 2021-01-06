@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         @new_user.save
         if !@new_user.nil?
             session[:user_id] = @new_user.id
-            redirect to "/"
+            redirect to "/notes"
         else
             redirect to "/login"
         end
