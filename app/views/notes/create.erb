@@ -3,8 +3,8 @@
         <p id="form-title">Create Your Note</p>
         <p id="form-subtitle">Never forget anything, except 2020.</p>
         <form method="POST" action="/notes">
-            <input id="edit-form-title" class="standard-form-input" type="text" name="title" placeholder="Title" autocomplete="off" autofocus>
-            <textarea id="edit-form-content" class="standard-form-input" type="textarea" name="content" placeholder="Content" autocomplete="off" cols="40" rows="5"></textarea>
+            <input id="edit-form-title" class="standard-form-input" type="text" name="title" placeholder="Title" autocomplete="off" autofocus required>
+            <textarea id="edit-form-content" class="standard-form-input" type="textarea" name="content" placeholder="Content" autocomplete="off" cols="40" rows="5" required></textarea>
             <button id="form-edit-save-button" class="standard-button" type="submit">Create Note</button>
         </form>
     </div>
