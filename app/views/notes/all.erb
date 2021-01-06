@@ -1,0 +1,8 @@
+<h1>All Notes</h1>
+<% @all_notes.each do |note| %>
+    <p>Written By:<%= note.user.username %></p>
+    <p>Title:<%= note.title %></p>
+    <p>Content:<%= note.content %></p>
+<% end%>
+
+

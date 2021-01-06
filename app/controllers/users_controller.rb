@@ -50,7 +50,7 @@ class UsersController < ApplicationController
             session[:user_id] = user.id
             redirect to "/notes"
         else
-
+            # todo - make sure to remove notes when ready to submit
             # take them back / keep them on the login page
             redirect to "/login"
         end
