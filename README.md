@@ -1,5 +1,3 @@
-# flatiron_project_2
-
 # Nevernote
 
 Nevernote is an online note keeping application with account sign up, account edit, account login, account logout that also includes the ability to create, edit, delete notes.
