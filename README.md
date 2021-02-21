@@ -47,4 +47,8 @@ This page can be accessed anywhere throughout the app once you've logged in clic
 
 You can get to this page from the **Account** and then clicking on the **Edit Account** link or visit using the direct link which is ```http://127.0.0.1:9393/users/1/edit```. Here you can make changes to username, email or password. Also if you'd like to delete your account you can by clicking the light grey text at the bottom of the form.
 
-### 
+---
+## Closing the app
+You can close the app with **ctrl+c*** or you can close it by running the command in terminal to close the port.
+
+```sudo kill -9 $(sudo lsof -t -i:9393)```
